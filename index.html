@@ -7,42 +7,192 @@
     <title>Экскурсовод</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="container-fluid">
-    <header class="row p-2 bg-light text-dark">
-        <div class="col-md-2">
-            <img src="images/logo.jpg" alt="logo" class="img-fluid rounded-circle">
-        </div>
-        <div class="col-md-8">
-            <h1>Экскурсовод</h1>
-            <p>Экскурсии по Москве</p>
-        </div>
-        <nav class="col-md-2">
-            <a href="lichncab.html">Личный кабинет</a>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.jpg" alt="логотип" class="img-fluid rounded-circle" width="50" height="50">
+                    Экскурсовод
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="lichncab.html">Личный кабинет</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    <div class="row p-2 bg-light text-dark">
-        <div class="col-md-7">
-            <h1>О нас</h1>
-            <p> Добро пожаловать в нашу компанию! Мы являемся экспертами в области туризма по Москве, предоставляя
-                уникальные и увлекательные пешеходные маршруты для истинных ценителей города.
 
-                Наша команда состоит из профессиональных гидов, которые влюблены в Москву и знают каждый уголок этого
-                удивительного города. Мы создаем маршруты, позволяющие вам окунуться в богатую историю, культуру и
-                атмосферу Москвы.
-
-                Мы предлагаем широкий выбор маршрутов, от классических достопримечательностей до скрытых уголков,
-                которые редко попадают в туристические гиды. Наши экскурсии позволят вам ощутить аутентичную атмосферу
-                города, погрузиться в его богатую историю и оставить незабываемые впечатления.
-
-                Мы гордимся тем, что наши гиды - профессионалы с глубоким знанием истории, культуры и архитектуры
-                Москвы. Мы стремимся сделать ваше путешествие увлекательным, запоминающимся и комфортным.</p>
+    <div class="container mt-4">
+        <div class="alert alert-info" role="alert">
+            Важное уведомление! Мы предлагаем уникальные экскурсии по Москве. Планируйте свое путешествие с нами!
         </div>
-        <div class="col-md-5">
-            <img src="images/photo.jpeg" alt="photo" class="img-fluid">
+
+        <div class="row">
+            <div class="col-md-6">
+                <img src="images/photo.jpeg" alt="фотография" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <h1>О нашей компании</h1>
+                <p>Добро пожаловать в нашу компанию! Мы являемся экспертами в области туризма по Москве,
+                    предоставляя
+                    уникальные и увлекательные пешеходные маршруты для истинных ценителей города.</p>
+                <p>Наша команда состоит из профессиональных гидов, которые влюблены в Москву и знают каждый уголок
+                    этого
+                    удивительного города. Мы создаем маршруты, позволяющие вам окунуться в богатую историю, культуру
+                    и
+                    атмосферу Москвы.</p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <h3>Индивидуальный подход</h3>
+                <p>Мы предлагаем персонализированные маршруты, учитывая интересы и предпочтения каждого клиента.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Опытные гиды</h3>
+                <p>Наши гиды - профессионалы с глубоким знанием истории, культуры и архитектуры Москвы.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Разнообразие маршрутов</h3>
+                <p>От классических до скрытых уголков, мы предлагаем разнообразие экскурсий по Москве.</p>
+            </div>
         </div>
     </div>
+
+    <div id="walking-routes" class="walking-routes mt-5">
+        <div class="fs-3 fw-bold text">
+            Список маршрутов
+        </div>
+        <div class="inputs my-3">
+            <div class="input-group">
+                <input id="find-route-input" type="text" class="form-control" placeholder="Поиск по названию">
+                <button class="btn btn-outline-success" type="button" id="find-route-btn">Найти</button>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="walking-routes-table table table-hover table-bordered text-center">
+                <thead>
+                    <tr class="table-active">
+                        <th scope="col">Название</th>
+                        <th scope="col">Описание</th>
+                        <th scope="col">Основные объекты</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody class="walking-routes-tbody">
+                </tbody>
+            </table>
+        </div>
+        <div class="d-flex justify-content-center">
+            <nav aria-label="Page navigation">
+                <ul id="pagination-walking-routes" class="pagination pagination-walking-routes">
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div id="guides-container" class="guides-container mt-5 d-none">
+        <div class="fs-3 fw-bold">
+            Доступные гиды по маршруту <span id="guides-route-name"
+                class="guides-route-name text-decoration-underline">Название маршрута</span>
+        </div>
+        <div class="inputs my-3">
+            <div class="input-group w-25">
+                <input type="text" class="form-control language-input" placeholder="Язык экскурсии">
+            </div>
+            <div class="expirience-container ms-0 ms-sm-5 mt-3 mt-sm-0 d-flex align-items-center">
+                <div class="expirience-text">Опыт работы</div>
+                <div class="expirience-from-to d-flex">
+                    <input id="guide-exp-from-input" type="text" class="form-control mx-3 exp-input" placeholder="От">
+                    <input id="guide-exp-to-input" type="text" class="form-control exp-input" placeholder="До">
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-hover table-bordered text-center">
+                <thead>
+                    <tr class="table-active">
+                        <th scope="col"></th>
+                        <th scope="col">ФИО</th>
+                        <th scope="col">Языки</th>
+                        <th scope="col">Опыт работы</th>
+                        <th scope="col">Стоимость услуг в час</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody class="guides-tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row mt">
+        <div class="col-md-4">
+            <div class="fs-3 fw-bold">
+                Начните ваш маршрут
+            </div>
+            <form id="start-point-form" class="my-3">
+                <div class="input-group">
+                    <input id="start-point-input" type="text" class="form-control"
+                        placeholder="Введите адрес начальной точки">
+                    <button class="btn btn-outline-primary" type="button" id="start-point-btn">Найти</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <div id="map" class="mt-5" style="height: 70vh;"></div>
+        </div>
+    </div>
+    <div class="modal fade" id="application-formalization-modal" tabindex="-1" aria-labelledby="ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg application-formalization-modal">
+            <div class="modal-content app-form-modal">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ModalLabel">Оформление заявки</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Отменить</button>
+                    <button type="button" class="btn btn-success modal-btn-send"
+                        data-bs-dismiss="modal">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-auto shadow-lg">
+        <div class="col-md-4 d-flex align-items-center px-5">
+            <span class="text-muted">©Экскурсовод</span>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha384-o5BqDVmMz9ATKxIep9tiCxS/Z9fNfEXl1eqrxTuhBhqBVGnTbD5I2aAp6YVHwDfN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pzjw8t+wn6NqLysdCqVn9OuUdusvko+axuBCCGk4tN5I4ZtFJq6IHD56phXVP6y"
+        crossorigin="anonymous"></script>
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <script>
+        DG.then(function () {
+            var map = DG.map('map', {
+                center: [55.7558, 37.6176],
+                zoom: 13
+            });
+        });
+    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
