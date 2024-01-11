@@ -1,66 +1,22 @@
-::selection {
-    background: #ff4500;
-    color: #4b0082;
-}
-
-.custom-tooltip {
-    --bs-tooltip-bg: #4b0082;
-    --bs-tooltip-color: #ff4500;
-}
-
-.tooltip-inner {
-    max-width: 20vw;
-    width: 20vw;
-}
-
-#application-delete-modal .modal-header,
-#application-delete-modal .modal-footer {
-    border: none;
-}
-
-html {
-    font: 0.9rem "Times New Roman";
-}
-
 body {
-    color: #708090;
-    background-color: #ffe4b5;
+    color: #231a1a; 
+    background-color: #f5df63; 
 }
 
 .page-link {
-    color: #4b0082;
+    color: #000080;
 }
 
 .page-link:hover {
     color: #ffffff;
-    background-color: #4b0082;
-}
-
-.btn-guides.btn-outline-primary {
-    color: #8b0000;
-    background-color: #f5deb3;
-    border-color: #8b0000;
-}
-
-.btn-guides.btn-outline-primary:hover {
-    color: #ffffff;
-    background-color: #8b0000;
-    border-color: #8b0000;
+    background-color: #8b0000; 
 }
 
 @media screen and (max-width: 768px) {
     .main-container .main-info {
         flex-direction: column;
     }
-}
 
-@media screen and (min-width: 768px) {
-    .main-container .main-info {
-        flex-direction: row;
-    }
-}
-
-@media screen and (max-width: 768px) {
     .main-container .main-info .main-info-img,
     .main-container .main-info .main-info-text {
         width: 100%;
@@ -68,6 +24,10 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+    .main-container .main-info {
+        flex-direction: row;
+    }
+
     .main-container .main-info .main-info-img,
     .main-container .main-info .main-info-text {
         width: 45%;

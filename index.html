@@ -79,64 +79,34 @@
             <div class="input-group">
                 <input id="find-route-input" type="text" class="form-control" placeholder="Поиск по названию">
                 <button class="btn btn-outline-success" type="button" id="find-route-btn">Найти</button>
+                <select id="main-object-filter" class="form-select">
+                    <option value="" selected>Не выбрано</option>
+                </select>
+                <button class="btn btn-outline-success" type="button" id="apply-filters-btn">Применить фильтры</button>
             </div>
         </div>
-        <div class="table-responsive">
-            <table class="walking-routes-table table table-hover table-bordered text-center">
-                <thead>
-                    <tr class="table-active">
-                        <th scope="col">Название</th>
-                        <th scope="col">Описание</th>
-                        <th scope="col">Основные объекты</th>
-                        <th scope="col"></th>
-                    </tr>
-                </thead>
-                <tbody class="walking-routes-tbody">
-                </tbody>
-            </table>
-        </div>
-        <div class="d-flex justify-content-center">
-            <nav aria-label="Page navigation">
-                <ul id="pagination-walking-routes" class="pagination pagination-walking-routes">
-                </ul>
-            </nav>
-        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="walking-routes-table table table-hover table-bordered text-center">
+            <thead>
+                <tr class="table-active">
+                    <th scope="col">Название</th>
+                    <th scope="col">Описание</th>
+                    <th scope="col">Основные объекты</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody class="walking-routes-tbody">
+            </tbody>
+        </table>
+    </div>
+    <div class="d-flex justify-content-center">
+        <nav aria-label="Page navigation">
+            <ul id="pagination-walking-routes" class="pagination pagination-walking-routes">
+            </ul>
+        </nav>
     </div>
 
-    <div id="guides-container" class="guides-container mt-5 d-none">
-        <div class="fs-3 fw-bold">
-            Доступные гиды по маршруту <span id="guides-route-name"
-                class="guides-route-name text-decoration-underline">Название маршрута</span>
-        </div>
-        <div class="inputs my-3">
-            <div class="input-group w-25">
-                <input type="text" class="form-control language-input" placeholder="Язык экскурсии">
-            </div>
-            <div class="expirience-container ms-0 ms-sm-5 mt-3 mt-sm-0 d-flex align-items-center">
-                <div class="expirience-text">Опыт работы</div>
-                <div class="expirience-from-to d-flex">
-                    <input id="guide-exp-from-input" type="text" class="form-control mx-3 exp-input" placeholder="От">
-                    <input id="guide-exp-to-input" type="text" class="form-control exp-input" placeholder="До">
-                </div>
-            </div>
-        </div>
-        <div class="table-responsive">
-            <table class="table table-hover table-bordered text-center">
-                <thead>
-                    <tr class="table-active">
-                        <th scope="col"></th>
-                        <th scope="col">ФИО</th>
-                        <th scope="col">Языки</th>
-                        <th scope="col">Опыт работы</th>
-                        <th scope="col">Стоимость услуг в час</th>
-                        <th scope="col"></th>
-                    </tr>
-                </thead>
-                <tbody class="guides-tbody">
-                </tbody>
-            </table>
-        </div>
-    </div>
     <div class="row mt">
         <div class="col-md-4">
             <div class="fs-3 fw-bold">
@@ -154,29 +124,13 @@
             <div id="map" class="mt-5" style="height: 70vh;"></div>
         </div>
     </div>
-    <div class="modal fade" id="application-formalization-modal" tabindex="-1" aria-labelledby="ModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg application-formalization-modal">
-            <div class="modal-content app-form-modal">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="ModalLabel">Оформление заявки</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Отменить</button>
-                    <button type="button" class="btn btn-success modal-btn-send"
-                        data-bs-dismiss="modal">Отправить</button>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-auto shadow-lg">
         <div class="col-md-4 d-flex align-items-center px-5">
             <span class="text-muted">©Экскурсовод</span>
         </div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha384-o5BqDVmMz9ATKxIep9tiCxS/Z9fNfEXl1eqrxTuhBhqBVGnTbD5I2aAp6YVHwDfN"
         crossorigin="anonymous"></script>
